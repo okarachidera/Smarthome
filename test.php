@@ -42,7 +42,7 @@ li a:hover {
                 <!--Grid row-->
                 <div class="row">
                   <!--Grid column-->
-                  <div class="col-lg-5 mt-xl-5 mb-5 wow " data-wow-delay="0.3s" id='header1'>
+                  <div class="col-lg-5 mt-xl-5 mb-5 wow " data-wow-delay="0.3s">
                     <h1 class="h1-responsive font-weight-bold mt-sm-5"> Internet of Things (IoT) Based Smart Home Using Deep Learning Algorithm</h1>
                     <hr class="hr-light">
                     <h4 class="">By</h4>
