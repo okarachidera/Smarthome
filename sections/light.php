@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/stylesection.css" >
+        <link rel="stylesheet" href="../css/newstyle.css" >
     </head>
     <body>
 
@@ -16,7 +17,7 @@
                 <div class="row">
                   
                   <!--Grid column-->
-                  <div class="col-md-4 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                  <div class="col-lg-5 mt-xl-5 mb-5 wow " data-wow-delay="0.3s" id='header1'>
                     <h1 class="h1-responsive font-weight-bold mt-sm-5"> Internet of Things (IoT) Based Smart Home Using Deep Learning Algorithm</h1>
                     <hr class="hr-light">
                     <h4 class="">By</h4>
@@ -24,7 +25,7 @@
                   </div>
 
                   <!--Grid column-->
-                  <div class="col-md-4 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                  <div class="col-xl-5 mt-xl-5 wow" data-wow-delay="0.3s">
         
                     <div class="smartphone">
                         <div class="content"style="background-image: url(../img/saver.jpg);">
@@ -157,7 +158,7 @@
 
                                 </div>
 
-                                <div class="col-4">
+                                <div class="col-4" id="homebtn">
                                     <a href="../index.php"><img src="../icons/home.png" alt="" height="80px"></a>
                                 </div>
 
