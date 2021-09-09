@@ -1,40 +1,40 @@
+<?php  include 'header.php'; ?>
+
 <html lang="en">
     <head>
+      <!-- Page css -->
+      <?php include('include/homecss.php'); ?>
 
     </head>
     <body>
 
     <?php
-    include('include/header.php');
-    ?>
 
+    if(isset($_SESSION['user_type'])){
+
+     $usertype=$_SESSION['user_type'];
+    }
+?>
 
 <style>
-  ul {
+.adminuser{
+  display:<?php
 
-  list-style-type: none;
-  background-color: #333;
-  position: fixed;
-  z-index:2;
-  width:330px
+      if($usertype=='adminuser'){
+        echo'block';
+      }
+      else{
+        echo 'none';
+      }
+  ?>
 }
 
+</style>
 
 
-li a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-}
 
-li a:hover {
-  background-color: teal;
-}
-
-
-  </style>
           <!-- Full Page Intro -->
-          <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+          <div class="view" style="background-image: url('img/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
             <!-- Mask & flexbox options-->
             <div class="mask rgba-gradient align-items-center">
               <!-- Content -->
@@ -43,14 +43,14 @@ li a:hover {
                 <div class="row">
                   <!--Grid column-->
                   <div class="col-lg-5 mt-xl-5 mb-5 wow " data-wow-delay="0.3s" id='header1'>
-                    <h1 class="h1-responsive font-weight-bold mt-sm-5"> Internet of Things (IoT) Based Smart Home Using Deep Learning Algorithm</h1>
+                    <h1 class="h1-responsive font-weight-bold mt-sm-5">Prediction of Home User Activities In a Secured Smart home Using IoT and Deep Learning</h1>
                     <hr class="hr-light">
                     <h4 class="">By</h4>
                     <h4 class="mb-4 font-weight-bold">OKARA, Chidera Chibuzor PG.2018/01273</h4> 
                   </div>
                   <!--Grid column-->
                   <!--Grid column-->
-                  <div class="col-xl-5 mt-xl-5 wow" data-wow-delay="0.3s">
+                  <div class="col-lg-5 mt-xl-5 mb-5 wow" data-wow-delay="0.3s" id="phonevw">
         
                     <div class="smartphone" id="">
                         <div class="content"style="background-image: url(img/saver.jpg);">
@@ -63,36 +63,53 @@ li a:hover {
                               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                                 <ul class="navbar-nav ">
                                   <li class="nav-item active">
-                                    <a class="nav-link" href="#">Refrigerator <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="output/refrigerator-output.php">Refrigerator <span class="sr-only">(current)</span></a>
                                   </li>
+
                                   <li class="nav-item">
-                                    <a class="nav-link" href="#">Air Condition</a>
+                                    <a class="nav-link" href="output\alarm-output.php">Alarm</a>
                                   </li>
+                                  
                                   <li class="nav-item">
-                                    <a class="nav-link" href="#">Television</a>
-                                  </li>
-                                  <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link " href="output\light-output.php">
                                       Lighting
                                     </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                      <a class="dropdown-item" href="#">Bedroom Light</a>
-                                      <a class="dropdown-item" href="#">Kitchen Light</a>
-                                      <a class="dropdown-item" href="#">Parlour Light</a>
-                                      <a class="dropdown-item" href="#">Toilet light</a>
-                                      <a class="dropdown-item" href="#">Corridor light</a>
-                                      <a class="dropdown-item" href="#">Security light</a>
-                                    </div>
                                   </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="output\air-condition-output.php">Air Condition</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="output\sound-system-output.php">Sound system</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="output\television-output.php">Television</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="output\doorlock-output.php">Door Lock</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="logout.php">Log Out</a>
+                                  </li>
+                                  <li class="nav-item adminuser">
+                                    <a class="nav-link" href="output/users.php">Users</a>
+                                  </li>
+                                  <li class="nav-item adminuser">
+                                    <a class="nav-link" href="register.php">Register</a>
+                                  </li>
+
                                 </ul>
                               </div>
                             </nav>    
 
                                 <div class="col-4">
+                                <span style="color:#fff;"><?php 
+                                    $sub = substr($lastname,0,1);
+                                    echo $surname.' '.$sub;?></span>
                                 </div>
                                 <div class="col-4">
                                 
                                 <p id="statusdate"></p>
+
                                   <script>
                                     var d = new Date();
                                     var n = d.toLocaleTimeString();
@@ -100,36 +117,37 @@ li a:hover {
                                   </script>
                             </div>
                             <div class="row" id="rowmbc">
+                                <!--<div class="col-4">-->
+                                <!--    <a href="#"><img src="icons/iconfinder_google_podcasts_new_logo_7115256.svg" alt="" height="50px"></a>-->
+                                <!--</div>-->
                                 <div class="col-4">
-                                    <a href="#"><img src="icons/iconfinder_google_podcasts_new_logo_7115256.svg" alt="" height="50px"></a>
+                                    <a href="output/dictionary-attacks.php">
+                                    <img src="icons/iconfinder_f-shield_256_282458.png" alt="" height="50px"></a>
                                 </div>
+                                <!--<div class="col-4">-->
+                                <!--    <a href="#"><img src="icons/iconfinder_photoshop_2318048.svg" alt="" height="50px"></a>-->
+                                <!--</div>-->
+                                <!--<div class="col-4">-->
+                                <!--    <a href="#"><img src="icons/iconfinder_google_chrome_new_logo_7115262.svg" alt="" height="50px"></a>-->
+                                <!--</div>-->
+                                <!--<div class="col-4">-->
+                                <!--    <a href="#"><img src="icons/iconfinder_google_maps_new_logo_7115251.svg" alt="" height="50px"></a>-->
+                                <!--</div>-->
+                                <!--<div class="col-4">-->
+                                <!--    <a href="#"><img src="icons/iconfinder_google_photos_new_logo_7115257.svg" alt="" height="50px"></a>-->
+                                <!--</div>-->
                                 <div class="col-4">
-                                    <a href="#"><img src="icons/iconfinder_WhatsApp_289134.svg" alt="" height="50px"></a>
+                                    <a href="sections/refrigerator.php"><img src="icons/smart-fridge.png" alt="" height="50px"></a>
                                 </div>
-                                <div class="col-4">
-                                    <a href="#"><img src="icons/iconfinder_photoshop_2318048.svg" alt="" height="50px"></a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="#"><img src="icons/iconfinder_google_chrome_new_logo_7115262.svg" alt="" height="50px"></a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="#"><img src="icons/iconfinder_google_maps_new_logo_7115251.svg" alt="" height="50px"></a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="#"><img src="icons/iconfinder_google_photos_new_logo_7115257.svg" alt="" height="50px"></a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="sections/fridge.php"><img src="icons/smart-fridge.png" alt="" height="50px"></a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="#"><img src="icons/iconfinder_google_search_new_logo_7115255.svg" alt="" height="50px"></a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="#"><img src="icons/iconfinder_google_maps_new_logo_7115251.svg" alt="" height="50px"></a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="sections/alarm.php"><img src="icons/bell.svg" alt="" height="50px"></a>
-                                </div>
+                                <!--<div class="col-4">-->
+                                <!--    <a href="#"><img src="icons/iconfinder_google_search_new_logo_7115255.svg" alt="" height="50px"></a>-->
+                                <!--</div>-->
+                                <!--<div class="col-4">-->
+                                <!--    <a href="#"><img src="icons/iconfinder_google_maps_new_logo_7115251.svg" alt="" height="50px"></a>-->
+                                <!--</div>-->
+                                <!--<div class="col-4">-->
+                                <!--    <a href="sections/alarm.php"><img src="icons/bell.svg" alt="" height="50px"></a>-->
+                                <!--</div>-->
                                 <div class="col-4">
                                     <a href="sections/light.php"><img src="icons/iconfinder_Eco_bulb_energy_light_2992437.svg" alt="" height="50px"></a>
                                 </div>
@@ -137,7 +155,7 @@ li a:hover {
                                     <a href="sections/ac.php"><img src="icons/air-conditioning.png" alt="" height="50px"></a>
                                 </div>
                                 <div class="col-4">
-                                    <a href="sections/speaker.php"><img src="icons/iconfinder_kmixdocked_error_7209.png" alt="" height="50px"></a>
+                                    <a href="sections/sound-system.php"><img src="icons/iconfinder_kmixdocked_error_7209.png" alt="" height="50px"></a>
                                 </div>
                                 <div class="col-4">
                                     <a href="sections/television.php"><img src="icons/iconfinder_Rounded_-_High_Ultra_Colour05_-_Television_2250027.svg" alt="" height="50px"></a>
@@ -150,7 +168,7 @@ li a:hover {
             
                         </div>
                   </div>
-                  <div class="mt-xl-5 wow" data-wow-delay="0.3s">
+                  <div class="col-lg-5 mt-xl-5 mb-5 wow" data-wow-delay="0.3s">
                     
                   </div>
                   <!--Grid column-->
@@ -166,8 +184,6 @@ li a:hover {
         <!-- Main navigation -->
 
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  
+
     </body>
 </html>
