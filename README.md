@@ -2,3 +2,5 @@
 # 1. To apply a deep learning Algorithm to model smart homes.
 # 2. To provide access control mechanisms to smart homes as an entity by restricting. unauthorized users.
 # 3. To use an IOT based home automation system for efficient use of energy and load control.
+# Author: Okara Chidera
+# Research Journal: https://ijarcce.com/papers/predicting-home-user-activities-in-a-secured-smart-home-using-internet-of-things-and-deep-learning/
