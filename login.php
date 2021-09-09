@@ -1,14 +1,25 @@
+<?php
+	session_start();
+	 include('include/homecss.php');
+	 include('function.php');
+	include('conn.php');
+
+	if(isset($_SESSION['id'])){
+		header('location:index.php');
+	}
+?>
 <html lang="en">
     <head>
+
+    <!-- Page css -->
+    <?php?>
 
     </head>
     <body>
 
-    <?php
-    include('include/header.php');
-    ?>
+
           <!-- Full Page Intro -->
-          <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+          <div class="view" style="background-image: url('img/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
             <!-- Mask & flexbox options-->
             <div class="mask rgba-gradient align-items-center">
               <!-- Content -->
@@ -16,17 +27,17 @@
                 <!--Grid row-->
                 <div class="row">
                   <!--Grid column-->
-                  <div class="col-md-4 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
-                    <h1 class="h1-responsive font-weight-bold mt-sm-5"> Internet of Things (IoT) Based Smart Home Using Deep Learning Algorithm</h1>
+                  <div class="col-lg-5 mt-xl-5 mb-5 wow " data-wow-delay="0.3s" id='header1'>
+                    <h1 class="h1-responsive font-weight-bold mt-sm-5"> Prediction of Home User Activities In a Secured Smart home Using IoT and Deep Learning</h1>
                     <hr class="hr-light">
                     <h4 class="">By</h4>
                     <h4 class="mb-4 font-weight-bold">OKARA, Chidera Chibuzor PG.2018/01273</h4> 
                   </div>
                   <!--Grid column-->
                   <!--Grid column-->
-                  <div class="col-md-4 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                  <div class="col-lg-5 mt-xl-5 mb-5 wow" data-wow-delay="0.3s" id="phonevw">
         
-                    <div class="smartphone" id="">
+                    <div class="smartphone" id="pot">
                         <div class="content"style="background-image: url(img/saver.jpg);">
                             <div class="row">
                                 <div class="col-4">
@@ -40,40 +51,57 @@
                                     document.getElementById("statusdate").innerHTML = n;
                                   </script>
                             </div>
-                            <div class="row" id="rowmbc">
-                            
 
-                            <div class="col-1">
-                            </div>
-                                <div class="col-10">
-                                      <form>
-                                      <div class="form-group">
-                                        <label for="exampleInputEmail1" class="text-warning">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+
+
+                            <div class="col-10" style="padding-left:80px">
+                             <form action="loginexec.php" method="POST" >
+							  <div class="form-group">
+								<label for="exampleInputEmail1" class="text-warning">Username</label>
+								<input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username" required>
                                         
                                       </div>
-                                      <div class="form-group">
-                                        <label for="exampleInputPassword1"class="text-warning">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                      </div>
-
-                                      <div class="form-group">
-                                        <label for="exampleInputPassword1"class="text-white"><a href="reset-password.php" class="text-white">reset password</a></label>
-                                      </div>
-
-                                      <button type="submit" class="btn btn-primary">Submit</button>
+                                      <button type="submit" class="btn btn-primary">Sign In</button>
                                       
                                     </form>
+									<div style="height: 15px;"></div>
+<?php
+			if(isset($_SESSION['log_msg'])){
+				?>
+				<div style="height: 30px;"></div>
+				<div class="alert alert-danger">
+					<span><center>
+					<?php echo $_SESSION['log_msg'];
+						unset($_SESSION['log_msg']); 
+					?>
+					</center></span>
+				</div>
+				<?php
+			}
+		?>
+
+<?php
+			if(isset($_SESSION['otp_failed'])){
+				?>
+				<div style="height: 30px;"></div>
+				<div class="alert alert-danger">
+					<span><center>
+					<?php echo $_SESSION['otp_failed'];
+						unset($_SESSION['otp_failed']); 
+					?>
+					</center></span>
+				</div>
+				<?php
+			}
+		?>
+
                               </div>
-                              <div class="col-1">
-                              </div>
-                            </div>
+
                             
             
                         </div>
                   </div>
-                  <div class="col-md-4 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
-                  
+                  <div class="col-lg-5 mt-xl-5 mb-5 wow" data-wow-delay="0.3s">
                     
                   </div>
                   <!--Grid column-->

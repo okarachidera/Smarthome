@@ -1,14 +1,14 @@
 <html lang="en">
     <head>
+    <!-- Page css -->
+    <?php include('include/homecss.php');?>
 
     </head>
     <body>
 
-    <?php
-    include('include/header.php');
-    ?>
+
           <!-- Full Page Intro -->
-          <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+          <div class="view" style="background-image: url('img/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
             <!-- Mask & flexbox options-->
             <div class="mask rgba-gradient align-items-center">
               <!-- Content -->
@@ -16,7 +16,7 @@
                 <!--Grid row-->
                 <div class="row">
                   <!--Grid column-->
-                  <div class="col-md-4 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                  <div class="col-lg-5 mt-xl-5 mb-5 wow " data-wow-delay="0.3s" id='header1'>
                     <h1 class="h1-responsive font-weight-bold mt-sm-5"> Internet of Things (IoT) Based Smart Home Using Deep Learning Algorithm</h1>
                     <hr class="hr-light">
                     <h4 class="">By</h4>
@@ -24,7 +24,7 @@
                   </div>
                   <!--Grid column-->
                   <!--Grid column-->
-                  <div class="col-md-4 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                  <div class="col-xl-5 mt-xl-5 wow" data-wow-delay="0.3s">
         
                     <div class="smartphone" id="">
                         <div class="content"style="background-image: url(img/saver.jpg);">
@@ -40,12 +40,8 @@
                                     document.getElementById("statusdate").innerHTML = n;
                                   </script>
                             </div>
-                            <div class="row" id="rowmbc">
-                            
 
-                            <div class="col-1">
-                            </div>
-                                <div class="col-10">
+                                <div class="col-10" style="padding-left:80px">
                                       <form>
                                       <div class="form-group">
                                         <label for="exampleInputEmail1" class="text-warning">Email address</label>
@@ -62,14 +58,13 @@
                                       
                                     </form>
                               </div>
-                              <div class="col-1">
-                              </div>
-                            </div>
+                             
+                          
                             
             
                         </div>
                   </div>
-                  <div class="col-md-4 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                  <div class="mt-xl-5 wow" data-wow-delay="0.3s">
                   
                     
                   </div>

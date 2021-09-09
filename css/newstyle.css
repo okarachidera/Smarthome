@@ -37,10 +37,18 @@
       margin-left: 30px;
       margin-right: auto;
     }
+    .table{
+      width:500px;
+    }
   }
 
-
+  .table{
+    width:400px;
+  }
 
   .navbar:not(.top-nav-collapse) {
     background: #424f9500 !important;
 }
+
+
+

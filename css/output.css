@@ -1,0 +1,83 @@
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+  }
+  
+  li a:hover {
+    background-color: teal;
+  }
+  @media only screen and (max-width: 1000px){
+      #rowmbc {
+          align-content: center;
+          padding-left: 50px;
+      }  div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+        margin: 2px 0;
+        white-space: nowrap;
+        justify-content: flex-end;
+        width: 200px;
+        padding-left: 20px;
+        margin-left: 200px;
+      }#a {
+        table-layout: auto;
+        width:auto;  
+      }
+}
+  @media only screen and (max-width: 1000px) {
+      ul {
+  
+        list-style-type: none;
+        position: fixed;
+        z-index:2;
+        width:64%;
+        font-size: 30px
+    }
+    #paginationmb{
+      padding-left:13%;
+    }
+    .table{
+        width:500px;
+      }
+  }
+  #statusdate {
+      color: black;
+  }
+
+
+.btn{
+  border-radius: 60px;
+  padding-left:25px;
+  padding-right:25px;
+  margin-left:10px;
+  
+  }
+  #action{
+  border-radius: .25rem;
+  padding-left:30px;
+  padding-right:30px;
+  margin-left:10px;
+  margin-top:20px;
+  
+  }
+  .boldsm{
+  color:white;
+  font-weight:bold;
+  margin-left:10px;
+  text-align:center;
+  }
+  
+  /* The device with borders */
+
+  #a {
+    table-layout: auto;
+    width:400px;  
+  }
+  
+  @media only screen and (max-width: 1000px){
+      #a {
+          table-layout: auto;
+          width:600;  
+        }#rowmbc{
+          padding-left:50px
+        }
+  }

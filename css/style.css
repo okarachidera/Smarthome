@@ -6,7 +6,7 @@
 /* The device with borders */
 .smartphone {
     position: relative;
-    width: 360px;
+    width: 430px;
     height: 600px;
     margin: auto;
     border: 16px black solid;
@@ -44,8 +44,9 @@
   }
   
   /* The screen (or content) of the device */
+
   .smartphone .content {
-    width: 330px;
+    width: 400px;
     height: 480px;
     background: rgb(0, 0, 0);
   }
@@ -59,6 +60,7 @@
 .col-4{
     padding-bottom: 10px;
     margin-top: 20px;
+    padding-left:30px;
 }
 .col-4:hover img{
   height: 55px;
@@ -219,7 +221,7 @@ input:checked + .slider:before {
   display: none;
 }
 
-.on, .off
+/* .on, .off
 {
   color: white;
   position: absolute;
@@ -228,7 +230,7 @@ input:checked + .slider:before {
   left: 50%;
   font-size: 10px;
   font-family: Verdana, sans-serif;
-}
+} */
 
 input:checked+ .slider .on
 {display: block;}

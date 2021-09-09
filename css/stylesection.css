@@ -6,7 +6,7 @@
 /* The device with borders */
 .smartphone {
     position: relative;
-    width: 360px;
+    width: 430px;
     height: 600px;
     margin: auto;
     border: 16px black solid;
@@ -44,8 +44,9 @@
   }
   
   /* The screen (or content) of the device */
+
   .smartphone .content {
-    width: 330px;
+    width: 400px;
     height: 480px;
     background: rgb(0, 0, 0);
   }
@@ -57,11 +58,12 @@
     padding-left: 30px;
 }
 .col-4{
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     margin-top: 20px;
+    padding-left:30px;
 }
 .col-4:hover img{
-  height: 70px;
+  height: 55px;
 }
 #mmx{
     background-image: url('/img/bg.jpg'); 
@@ -219,7 +221,7 @@ input:checked + .slider:before {
   display: none;
 }
 
-.on, .off
+/* .on, .off
 {
   color: white;
   position: absolute;
@@ -228,7 +230,7 @@ input:checked + .slider:before {
   left: 50%;
   font-size: 10px;
   font-family: Verdana, sans-serif;
-}
+} */
 
 input:checked+ .slider .on
 {display: block;}
@@ -245,3 +247,48 @@ input:checked + .slider .off
 
 .slider.round:before {
   border-radius: 50%;}
+
+
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .chiopen{
+    color:#2ab934;
+  }
+  .chiclose{
+    color:#ca2222;
+  }
