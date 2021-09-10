@@ -11,4 +11,5 @@ The aim of this research work is to model deep learning algorithms for smart hom
 
 
 Author: <a href="http://portfolio.clptechnology.com.ng/">Chidera Okara</a>
+
 Research Journal: https://ijarcce.com/papers/predicting-home-user-activities-in-a-secured-smart-home-using-internet-of-things-and-deep-learning/
