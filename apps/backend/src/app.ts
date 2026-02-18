@@ -6,6 +6,7 @@ import deviceRoutes from './routes/deviceRoutes';
 import predictionRoutes from './routes/predictionRoutes';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler';
 import { env } from './utils/env';
+import { registerSwagger } from './docs/swagger';
 
 const app = express();
 
@@ -16,6 +17,8 @@ if (env.trustProxy) {
 app.use(helmet());
 app.use(morgan('dev'));
 app.use(express.json());
+
+registerSwagger(app);
 
 app.get('/health', (_req, res) => {
   res.status(200).json({ status: 'ok' });

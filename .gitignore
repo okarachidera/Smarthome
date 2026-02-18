@@ -12,3 +12,6 @@ apps/backend/dist
 apps/backend/data/security-events.jsonl
 .DS_Store
 apps/backend/data/security-events.jsonl
+temp_auto_push.bat
+temp_interactive_push.bat
+branch_structure.json
