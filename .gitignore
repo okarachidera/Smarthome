@@ -11,3 +11,4 @@ apps/ml/models/*.pkl
 apps/backend/dist
 apps/backend/data/security-events.jsonl
 .DS_Store
+apps/backend/data/security-events.jsonl
