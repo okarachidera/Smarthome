@@ -1,0 +1,25 @@
+services:
+  backend:
+    build:
+      context: ./apps/backend
+    container_name: smarthome-backend
+    env_file:
+      - ./.env
+    environment:
+      - PORT=${BACKEND_PORT:-3000}
+      - OTP_TTL_MS=${OTP_TTL_MS:-600000}
+      - MAX_DICTIONARY_ATTEMPTS=${MAX_DICTIONARY_ATTEMPTS:-3}
+      - ML_SERVICE_URL=${ML_SERVICE_URL:-http://ml:8000}
+      - EXPOSE_DEBUG_OTP=${EXPOSE_DEBUG_OTP:-false}
+      - TRUST_PROXY=${TRUST_PROXY:-false}
+    ports:
+      - "${BACKEND_PORT:-3000}:3000"
+    depends_on:
+      - ml
+
+  ml:
+    build:
+      context: ./apps/ml
+    container_name: smarthome-ml
+    ports:
+      - "${ML_PORT:-8000}:8000"
