@@ -82,6 +82,11 @@ curl -X POST http://localhost:8000/train-model \
   -d '{"dataset_path":"data/device_activity.csv"}'
 ```
 
+## API Docs
+
+- Backend Swagger UI: `http://localhost:3000/api-docs`
+- ML Swagger UI (FastAPI): `http://localhost:8000/docs`
+
 ## Quick API check
 
 Login:
