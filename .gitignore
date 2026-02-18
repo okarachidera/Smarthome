@@ -1,1 +1,13 @@
+node_modules
+.env
+*.log
+coverage
+__pycache__
+*.pyc
+.venv
+.pytest_cache
+apps/ml/models/*.joblib
+apps/ml/models/*.pkl
+apps/backend/dist
 apps/backend/data/security-events.jsonl
+.DS_Store
