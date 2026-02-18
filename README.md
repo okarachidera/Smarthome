@@ -1,4 +1,4 @@
-# Smart Home Activity Prediction (MSc Project Revival)
+# Smart Home Activity Prediction (MSc Research Project)
 
 This repository is a cleaned-up rebuild of my 2021 MSc smart home research project:
 
